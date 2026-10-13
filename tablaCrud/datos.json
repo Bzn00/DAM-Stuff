@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Daniel",
+        "edad": 26,
+        "Anime fav" : "Code Geass"
+    },
+    {
+        "nombre": "Carlos",
+        "edad": 22,
+        "Anime fav" : "Jojos"
+    },
+    {
+        "nombre": "Alejandro",
+        "edad": 20,
+        "Anime fav" : "Vinland Saga"
+    }
+]

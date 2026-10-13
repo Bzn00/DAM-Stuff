@@ -1,0 +1,22 @@
+[
+    {
+        "nombreAnime" : "Black clover",
+        "calificacion" : 8.3,
+        "Genero" : "Accion/Fantasia"
+    },
+    {
+        "nombreAnime" : "Re:Life",
+        "calificacion" : 10,
+        "Genero" : "Romance/Reencuentros de la vida"
+    },
+    {
+        "nombreAnime" : "Code Geass",
+        "calificacion" : 10,
+        "Genero" : "Accion/Fantasia/Militar"
+    },
+    {
+        "nombreAnime" : "Tokyo Ghoul",
+        "calificacion" : 7.8,
+        "Genero" : "Gore/Accion/Seinen"
+    }
+]

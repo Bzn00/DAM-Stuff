@@ -1,0 +1,22 @@
+[
+    {
+        "Marca":"Seat",
+        "Modelo": "Ibiza",
+        "Año": 2017
+    },
+    {
+        "Marca":"Ford",
+        "Modelo": "Focus",
+        "Año": 2010
+    },
+    {
+        "Marca":"Citroen",
+        "Modelo": "Sara",
+        "Año": 2007
+    },
+    {
+        "Marca":"Renault",
+        "Modelo": "Corolla",
+        "Año": 2017
+    }
+]

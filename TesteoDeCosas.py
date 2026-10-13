@@ -14,8 +14,12 @@
 cantidadLista = int(input("Introduce el tamaño de la lista: "))
 
 lista = []
+
 for i in range(cantidadLista):
-    objeto = input(f"Objeto nº ", i, ": ")
-    lista.append(objeto)
+   elemento = input(f"Introduce el elemento numero {i + 1}:")
+   lista.append(elemento)
+
+print(lista)
+
 
 print(lista)

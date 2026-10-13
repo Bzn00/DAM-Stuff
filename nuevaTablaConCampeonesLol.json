@@ -1,0 +1,32 @@
+[
+    {
+        "nombre" : "Evelynn",
+        "rol" : "Asesino",
+        "daño" : "AP",
+        "vida" : 642
+    },
+    {
+        "nombre" : "Zed",
+        "rol" : "Asesino",
+        "daño" : "AD",
+        "vida" : 654
+    },
+    {
+        "nombre" : "Syndra",
+        "rol" : "Mago",
+        "daño" : "AP",
+        "vida" : 563
+    },
+    {
+        "nombre" : "Katarina",
+        "rol" : "Asesino",
+        "daño" : "AP",
+        "vida" : 672
+    },
+    {
+        "nombre" : "Jhin",
+        "rol" : "Tirador",
+        "daño" : "AD",
+        "vida" : 655
+    }
+]
