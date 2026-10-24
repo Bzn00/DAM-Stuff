@@ -2,7 +2,6 @@ import sys
 import os
 from PyQt5 import QtWidgets, uic
 
-
 class LoginWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
