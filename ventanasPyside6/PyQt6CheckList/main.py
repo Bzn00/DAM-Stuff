@@ -13,7 +13,6 @@ class Ventana(QMainWindow):
         self.ui.setupUi(self)
         self.ui.botonIntroducirTarea.clicked.connect(self.introducirTareas)
         self.setWindowTitle("Mi app")
-        self.setWindowIcon(QIcon("C:\\Users\\PC GAMER\\Documents\\VSCode\\ventanasPyside6\\Icon\\SORAKAxAHRI.ico"))
         
     def introducirTareas(self):
         texto = self.ui.campoIntroducirTarea.text()
