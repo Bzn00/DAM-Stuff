@@ -1,4 +1,4 @@
-cubos = []
+numeros = []
 
 while True:
 
@@ -8,6 +8,6 @@ while True:
         print("JAJAJA 676767")
         break
     else:
-        cubos.append(valores)
+        numeros.append(valores)
 
-print(cubos)
+print(numeros)
