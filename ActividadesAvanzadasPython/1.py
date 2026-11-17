@@ -3,13 +3,14 @@ from tkinter import messagebox
 from tkinter import ttk
 
 
+dictTareas = {
+    "Sacar al perro": 30,
+    "Ir a correr": 60
+}
 
 ventanaPrincipal = tk.Tk()
 ventanaPrincipal.geometry("1200x600")
 ventanaPrincipal.title("Gestor de tareas")
-
-
-
 
 etiquetaPresentacion = tk.Label(ventanaPrincipal, text="Gestor de tareas", font="Impact")
 etiquetaNombreTarea = tk.Label(ventanaPrincipal, text="Nombre de la tarea")
@@ -20,6 +21,14 @@ listaTareas = ttk.Treeview(ventanaPrincipal, columns=("Tarea", "Tiempo"), show="
 listaTareas.heading("Tarea", text="Tarea")
 listaTareas.heading("Tiempo", text="Tiempo estimado(min)")
 
+for tarea, tiempo in dictTareas.items():
+    listaTareas.insert("", tk.END, values=(tarea, tiempo))
+
+
+
+def insertarDatosEjemplo():
+    for tarea, timempo in dictTareas.items():
+        listaTareas.insert("", tk.END, values=(tarea, tiempo))
 
 def salir():
     ventanaPrincipal.destroy()
@@ -32,19 +41,24 @@ def añadirTarea():
     else:
         messagebox.showerror(title="Error", message="Error el campo \"tarea\" o \"tiempo estimado\" esta vacio")
 
-
 def borrarSeleccionado(seleccion):
     if seleccion:
         listaTareas.delete(*seleccion)
 
 def borrarTodo():
-    listaTareas.delete()
+    opcion = messagebox.askyesno(title="Confirmar", message="¿Desea borrar todos los elementos?")
+    if opcion:
+        for elementos in listaTareas.get_children():
+            listaTareas.delete(elementos)
+    else:
+        messagebox.showinfo(title="Cancelado", message="Se ha cancelado la eliminacion")
 
 frameBotones = tk.Frame(ventanaPrincipal)
 botonInsertar = tk.Button(frameBotones, text="Insertar Tarea", command=añadirTarea)
 botonSalir = tk.Button(ventanaPrincipal, text="Salir", command=salir)
 botonBorrarSeleccion = tk.Button(frameBotones, text="Borrar Seleccion", command=lambda: borrarSeleccionado(listaTareas.selection()))
 botonBorrarTodo = tk.Button(frameBotones, text="Borrar todo", command=borrarTodo)
+botonInsertarDatosEjemplo = tk.Button(frameBotones, text="Insertar datos ejemplo", command=insertarDatosEjemplo)
 
 etiquetaPresentacion.grid(row=0, padx=550, pady=10, column=0)
 
@@ -57,6 +71,7 @@ campoTiempoEstimado.grid(padx=1, pady=1, column=0, row=4)
 botonInsertar.grid(padx=5, column=0, row=0)
 botonBorrarSeleccion.grid(padx=5, column=1, row=0)
 botonBorrarTodo.grid(padx=5, column=2, row=0)
+botonInsertarDatosEjemplo.grid(padx=5, column=3, row=0)
 
 frameBotones.grid(row=5, column=0, pady=10)
 
